@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EnchantForge — Minecraft Enchanter</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<header class="brand"><div><h1>EnchantForge</h1><p>Minecraft item command generator</p></div></header>
+
+<section class="card">
+<div class="step">1 · Item</div><h2>Choose your item</h2>
+<label class="title">Item</label>
+<div class="field" id="itemField">
+<div class="select" id="itemSelect">Netherite Sword</div>
+<div class="menu" id="itemMenu"><div class="search"><input id="itemSearch" placeholder="Search items..."></div><div class="options" id="itemOptions"></div></div>
+</div>
+<div class="item-preview"><div class="pixel-icon" id="itemIcon" title="Minecraft item preview"></div><div class="name"><label class="title">Custom item name</label><input id="customName" placeholder="e.g. The Devourer"></div></div>
+</section>
+
+<section class="card">
+<div class="step">2 · Enchantments</div><h2>Configure enchantments</h2>
+<div class="mode"><button class="active" data-mode="java">Java Edition</button><button data-mode="bedrock">Bedrock Edition</button></div>
+<label class="title">Version</label>
+<div class="field" id="versionField"><div class="select" id="versionSelect">Java 1.21.11+</div><div class="menu" id="versionMenu"><div class="options" id="versionOptions"></div></div></div>
+<div style="height:12px"></div>
+<div class="enchant-tools"><input class="searchbox" id="enchSearch" placeholder="Search enchantments..."><button class="tiny" id="selectAll">Select visible</button><button class="tiny" id="clearAll">Clear</button></div>
+<div class="enchants" id="enchants"></div>
+<div class="custom"><label class="title">Custom enchantment IDs</label><input id="customEnchants" placeholder="minecraft:sharpness, minecraft:mending"><div class="hint">Use this for IDs not shown above. Custom mode accepts the full vanilla enchantment registry.</div></div>
+<div class="warns" id="warnings"></div>
+</section>
+
+<section class="card">
+<div class="step">3 · Accept</div><h2>Generate command</h2>
+<button class="primary" id="generate">Accept & Generate Command</button>
+<div class="command" id="command"></div>
+<div class="actions"><button id="copy">Copy Command</button></div>
+<div class="note" id="note">Levels are command-oriented and can be entered from 1–255. Vanilla enchantment definitions have maximum levels (for example, Sharpness 5), but Java's enchantment data model allows an enchantment max_level up to 255; using values beyond the normal gameplay maximum can create over-leveled command items. Java uses the modern item-component syntax. Bedrock generates a /give command plus /enchant commands because Bedrock's documented /enchant command applies enchantments to the player's selected item.</div>
+</section>
+</div>
+
+<script src="js/data/enchantments.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
