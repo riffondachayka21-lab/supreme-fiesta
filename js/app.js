@@ -13,8 +13,7 @@ const items = {
                 "sweeping_edge",
                 "unbreaking",
                 "mending",
-                "curse_of_vanishing",
-                "lunge"
+                "curse_of_vanishing"
             ]
         ],
         [
@@ -31,7 +30,6 @@ const items = {
                 "unbreaking",
                 "mending",
                 "curse_of_vanishing",
-                "lunge"
             ]
         ],
         [
